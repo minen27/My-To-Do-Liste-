@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloudy To-Do</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Cloudy Animated Background -->
+    <div class="cloudy-bg">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="cloud cloud4"></div>
+    </div>
+
+    <!-- Rotating Quote -->
+    <div id="quoteBox"></div>
+
+    <!-- Splash Screen -->
+    <div id="splash">
+        <h1>☁️ Welcome back, Minen</h1>
+        <p>A whole day is waiting for you...</p>
+        <button id="startDayBtn">Start My Day</button>
+    </div>
+
+    <!-- Main App Container -->
+    <div class="container hide">
+        <div class="top-bar">
+            <h1 class="title">☁️ Cloudy Tasks</h1>
+            <button id="darkModeToggle">🌙</button>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="What do you need to do?" />
+            <input type="date" id="dateInput" />
+            <button id="addBtn">➕ Add</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div class="bottom-bar">
+            <select id="categorySelect">
+        <option value="">🗂️ No Category</option>
+        <option value="🌟 Urgent">🌟 Urgent</option>
+        <option value="🧘 Relaxed">🧘 Relaxed</option>
+        <option value="📚 Study">📚 Study</option>
+        <option value="💼 Work">💼 Work</option>
+      </select>
+            <button id="clearBtn">🧹 Clear All</button>
+            <button id="musicToggle">🎵 Music</button>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="celebration" class="hide"></canvas>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/16/audio_86e60ee4dc.mp3" type="audio/mpeg">
+  </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
